@@ -13,7 +13,7 @@ function Hero() {
   return (
     <div className="w-full h-screen relative ">
       <img
-        className=" w-full h-[80%] ob bg-blend-lighten object-cover "
+        className=" w-full h-[80%] ob bg-blend-lighten object-cover select-none"
         src="https://images.pexels.com/photos/1556688/pexels-photo-1556688.jpeg?auto=compress&cs=tinysrgb&w=2000"
         alt=""
       />
