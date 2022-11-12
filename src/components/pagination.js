@@ -26,7 +26,7 @@ function Pagination(props) {
     );
   });
 
-  return <ul className="container flex justify-center mb-10 mt-10">{pages}</ul>;
+  return <ul className="container flex justify-center  mt-10">{pages}</ul>;
 }
 
 export default Pagination;

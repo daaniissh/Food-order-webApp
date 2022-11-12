@@ -20,7 +20,7 @@ function Popup(props) {
        
       
      <h2 className='popup-meal-name mb-3' >{item.strMeal}</h2>
-     <p className='overflow-y-scroll text-sm h-[170px]' >{item.strInstructions}</p>
+     <p className='dark:text-white overflow-y-scroll text-sm h-[170px]' >{item.strInstructions}</p>
      <ul className='mb-[22px] flex' >
       <li className='dish-ing-li' >{item.strIngredient1}</li>
       <li className='dish-ing-li'  >{item.strIngredient2}</li>
@@ -36,7 +36,7 @@ function Popup(props) {
   return (
     <div className='bg-black-transparant   fixed left-0 right-0 top-0 bottom-0 z-[999] flex flex-col items-center justify-center' >
      <FontAwesomeIcon onClick={props.HidePopup} className='absolute right-4 top-1 md:top-4 hover:rotate-45 hover:ease duration-75 hover:cursor-pointer   text-red-600 font-bold text-3xl' icon={faXmark}/>
-      <div className="bg-gray-200  m-[10px] md:w-[800px] md:h-[600px] rounded-lg  p-[20px]"> 
+      <div className="dark:bg-slate-800 bg-gray-200  m-[10px] md:w-[800px] md:h-[600px] rounded-lg  p-[20px]"> 
       
             
 

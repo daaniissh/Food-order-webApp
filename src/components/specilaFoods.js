@@ -33,9 +33,9 @@ function SpecilaFoods(props) {
       {showPopup && (
         <Popup currentdish={currentdish} allDishes={props.img} dishImages={dishImages} setShowpopup={setShowpopup} HidePopup={HidePopup}></Popup>
       )}
-      <div className="container md:block flex flex-col justify-center  mx-auto w-full transition-opacity">
+      <div className="container md:block  flex flex-col justify-center  mx-auto w-full transition-opacity">
         <div className="max-w-xs">
-          <h2 className="font-mono  font-semibold text-3xl mb-6 ml-5 -mt-20">
+          <h2 className="font-mono dark:text-white font-semibold text-3xl mb-6 ml-5 -mt-20">
             Our Specila{" "}
             <span className="border-b-4 border-yellow-600">Dishes</span>
           </h2>

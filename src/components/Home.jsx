@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSun } from "@fortawesome/free-solid-svg-icons";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import Hero from "./Hero";
 import Specila from "./specilaFoods";
 import FilterDishes from "./FilterDishes";
-function Home() {
+function Home(props) {
   const [menu, setData] = useState([]);
   const [category, setGatogery] = useState([]);
   const [loading, setLoading] = useState(true);
+
   const [Single, setSigle] = useState([]);
 
   const API_URL = "https://www.themealdb.com/api/json/v1/1/search.php?f=c";
@@ -50,20 +51,26 @@ function Home() {
   //   );
   // });
 
+ 
+
   return (
-    <div className="overflow-x-auto dark">
-      <FontAwesomeIcon
-        className="absolute top-4 text-2xl right-4 z-50 text-yellow-300 cursor-pointer"
+    <div className="">
+      <FontAwesomeIcon onClick={props.darkmode}
+        className={props.mode ? "hidden absolute top-4 text-2xl right-4 z-50 text-yellow-300 cursor-pointer":"absolute top-4 text-2xl right-4 z-50 text-yellow-300 cursor-pointer"}
         icon={faSun}
+      />
+      <FontAwesomeIcon onClick={props.lightmode}
+        className={props.mode ? " absolute top-4 text-2xl right-4 z-50 text-yellow-300 cursor-pointer":"hidden absolute top-4 text-2xl right-4 z-50 text-yellow-300 cursor-pointer"}
+        icon={faMoon}
       />
 
       <Hero />
       {!loading ? (
         <Specila img={menu} />
       ) : (
-        <div className="w-full h-screen absolute flex justify-center items-center loading top-0 text-4xl font-bold text-center  text-gray-800 ">
+        <div className=" w-full h-screen absolute flex justify-center items-center loading top-0 text-4xl font-bold text-center  text-gray-800 ">
           <img
-            className="w-16 h-16 "
+            className="w-16 h-16"
             src="https://samherbert.net/svg-loaders/svg-loaders/oval.svg"
             alt=""
           />{" "}

@@ -14,7 +14,7 @@ function Card(props) {
       src={strMealThumb}
       alt=""
     />
-    <h2 className="m-5 max-w-[200px]  font-sans font-semibold">
+    <h2 className="m-5 max-w-[200px] dark:text-white  font-sans font-semibold">
       {strMeal}
     </h2>
   </li>

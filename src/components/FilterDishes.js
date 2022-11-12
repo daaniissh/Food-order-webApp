@@ -65,8 +65,8 @@ let filterd = filterdDish.length
   });
 
   return (
-    <div className="container">
-      <h2 className="font-mono  font-semibold text-3xl mb-6 ml-12">
+    <div className="container ">
+      <h2 className="font-mono  dark:text-white font-semibold text-3xl mb-6 ml-12">
         Choose your <span className="border-b-4 border-yellow-600">Dishes</span>
       </h2>
       <div className=""></div>
