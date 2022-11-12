@@ -18,7 +18,7 @@ To run tests, run the following command
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Hearerrrr)
+![App Screenshot](./public/img/Screenshot%20(119).png)
 
 
 
