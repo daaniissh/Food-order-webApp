@@ -35,3 +35,35 @@ body{
     .bg-black-transparant{
         background: rgba(0, 0, 0, 0.425);
     }
+
+    .popup-btn{
+        border: none;
+        outline: none;
+        background-color: #ffb902;
+        color: black;
+        padding: 12px 22px;
+        border-radius: 6px;
+        font-family: 'Montserrat Alternates', sans-serif;
+        font-size: 18px;
+        cursor: pointer;
+        font-weight: bold;
+        margin-top: 310px;
+        transition: all ease 0.3s;
+    }
+    .popup-btn:hover{
+        background: #dda50a;
+    }
+    .popup-meal-name{
+        color: rgb(94, 87, 0);
+        @apply font-extrabold text-xl
+    }
+
+    .dish-ing-li{
+        background: black;
+        color:white;
+        padding: 8px 12px;
+        border-radius: 32px;
+        font-size: 14px;
+        margin-right: 12px;
+        margin-top: 5px;
+    }
