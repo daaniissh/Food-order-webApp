@@ -18,7 +18,7 @@ To run tests, run the following command
 
 ## Screenshots
 
-![App Screenshot](./public/img/Screenshot%20(119).png)
+![App Screenshot](./public/img/scr.png)
 
 
 

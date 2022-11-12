@@ -12,7 +12,7 @@ function Popup(props) {
     return(
       <>
       <div className="w-full h-[200px] mb-[353px] relative">
-         <img src={item.strMealThumb} className="w-full mt-4  object-cover mb-[330px] p-3 rounded-lg h-[200px] " alt="" />
+         <img src={item.strMealThumb} className="w-full mt-4   object-cover mb-[330px] p-3 rounded-lg h-[200px] " alt="" />
          <h3 className='absolute z-[888] bottom-5 left-10 bg-white p-3 rounded-xl text-black font-bold ' >{item.strCategory}</h3>
        
         
