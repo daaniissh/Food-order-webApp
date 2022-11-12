@@ -2,3 +2,36 @@
 @tailwind components;
 @tailwind utilities;  
 
+
+/* @layer utilities{
+  
+} */
+
+body{
+    @apply dark:bg-gray-800
+}
+.loading{
+  background: rgba(0, 0, 0, 0.623);
+     
+}
+.hero-container{
+@apply container
+}
+.text-shadow{
+    text-shadow: 1px 0px 6px rgb(61, 61, 61);}
+
+    /* .breath{
+        margin: 40px 0;
+    } */
+
+
+        
+
+    li{
+        list-style-type:none ;
+    }
+
+
+    .bg-black-transparant{
+        background: rgba(0, 0, 0, 0.425);
+    }
