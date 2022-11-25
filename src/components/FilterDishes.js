@@ -31,7 +31,7 @@ let filterd = filterdDish.length
     setActiveDish(category);
     let filterdMenu = props.Allmenu.filter((dis) => {
       return dis.strCategory === category;
-    }).map((filterd, index) => {
+    }).map((filterd, index) => {  
       return (
         <li>
           <img
