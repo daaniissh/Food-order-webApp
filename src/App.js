@@ -1,6 +1,4 @@
 
-import { faSun } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 import './App.css';
 import Home from './components/Home';

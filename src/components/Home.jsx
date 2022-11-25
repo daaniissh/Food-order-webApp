@@ -1,18 +1,49 @@
 import React, { useEffect, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import Hero from "./Hero";
 import Specila from "./specilaFoods";
 import FilterDishes from "./FilterDishes";
+import Header from "../pages/Header";
 function Home(props) {
   const [menu, setData] = useState([]);
   const [category, setGatogery] = useState([]);
-  const [loading, setLoading] = useState(true);
-
   const [Single, setSigle] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const options = [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "m",
+    "n",
+    "o",
+    "p",
+    "q",
+    "r",
+    "s",
+    "t",
+    "u",
+    "v",
+    "w",
+    "x",
+    "y",
+  ];
+  const [srch, setsrch] = useState(options[2]);
+  // let LowerAlphabets = [];
+  // options.forEach((item) => {
+  //   let o = item.toUpperCase();
+  //   LowerAlphabets.push(o);
+  // });
 
-  const API_URL = "https://www.themealdb.com/api/json/v1/1/search.php?f=c";
+
 
   const API_URLS = "https://www.themealdb.com/api/json/v1/1/categories.php";
   const getAllCategorys = () => {
@@ -27,7 +58,7 @@ function Home(props) {
       setSigle(da.data.meals);
     });
   };
-
+  const API_URL = `https://www.themealdb.com/api/json/v1/1/search.php?f=${srch}`;
   const mealData = () => {
     axios.get(API_URL).then((response) => {
       setData(response.data.meals);
@@ -38,8 +69,7 @@ function Home(props) {
     mealData();
     getAllCategorys();
     NamedCAtogoery();
-
-  }, []);
+  }, [srch]);
 
   // let menuItems = menu.map((item) => {
   //   return (
@@ -51,17 +81,15 @@ function Home(props) {
   //   );
   // });
 
- 
-
   return (
     <div className="">
-      <FontAwesomeIcon onClick={props.darkmode}
-        className={props.mode ? "hidden absolute top-4 text-2xl right-4 z-50 text-yellow-300 cursor-pointer":"absolute top-4 text-2xl right-4 z-50 text-yellow-300 cursor-pointer"}
-        icon={faSun}
-      />
-      <FontAwesomeIcon onClick={props.lightmode}
-        className={props.mode ? " absolute top-4 text-2xl right-4 z-50 text-yellow-300 cursor-pointer":"hidden absolute top-4 text-2xl right-4 z-50 text-yellow-300 cursor-pointer"}
-        icon={faMoon}
+      <Header
+        srch={srch}
+        options={options}
+        setsrch={setsrch}
+        lightmode={props.lightmode}
+        darkmode={props.darkmode}
+        mode={props.mode}
       />
 
       <Hero />

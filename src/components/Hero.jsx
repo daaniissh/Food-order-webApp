@@ -14,7 +14,7 @@ function Hero() {
     <div className="w-full h-screen relative ">
       <img
         className=" w-full h-[80%] ob bg-blend-lighten object-cover select-none"
-        src="https://images.pexels.com/photos/1556688/pexels-photo-1556688.jpeg?auto=compress&cs=tinysrgb&w=2000"
+        src="https://images.unsplash.com/photo-1543353071-10c8ba85a904?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9vZCUyMGJhY2tncm91bmR8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60"
         alt=""
       />
       <div className="absolute top-[150px] max-h-24   md:top-[170px] lg:top-[200px] left-10 sm:left-24 max-w-md    ">
