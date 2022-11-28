@@ -5,7 +5,7 @@ function Card(props) {
 
  
   return (
-    <span  onClick={()=>props.showPopupHandler(strMeal,strMealThumb)}>
+    <span key={"hello"} onClick={()=>props.showPopupHandler(strMeal,strMealThumb)}>
 
     
     <li>

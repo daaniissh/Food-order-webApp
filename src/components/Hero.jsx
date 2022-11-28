@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
+
 function Hero() {
   const [mainImg, setImg] = useState([]);
   const API_URL = "https://www.themealdb.com/api/json/v1/1/random.php";
@@ -8,15 +9,16 @@ function Hero() {
     axios.get(API_URL).then((url) => {
       setImg(url.data.meals);
     });
-  });
+  },[]);
 
   return (
     <div className="w-full h-screen relative ">
       <img
         className=" w-full h-[80%] ob bg-blend-lighten object-cover select-none"
-        src="https://images.unsplash.com/photo-1543353071-10c8ba85a904?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9vZCUyMGJhY2tncm91bmR8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60"
+        src="https://images.unsplash.com/photo-1581674211019-7f49074a94e4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fGZhc3Rmb29kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=2000&q=60"
         alt=""
       />
+      
       <div className="absolute top-[150px] max-h-24   md:top-[170px] lg:top-[200px] left-10 sm:left-24 max-w-md    ">
         <h2 className="mb-10 font-mono font-bold text-4xl text-white">
           Its all about food & taste

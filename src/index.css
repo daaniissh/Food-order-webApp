@@ -57,7 +57,9 @@ body{
         color: rgb(94, 87, 0);
         @apply font-extrabold text-xl dark:text-yellow-600
     }
-
+    .header-a{
+      @apply p-2 lg:px-4 md:mx-2  dark:text-white dark:hover:bg-stone-800  text-white rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300 dark:hover:text-white
+    }
     .dish-ing-li{
         background: black;
         color:white;
@@ -73,3 +75,24 @@ body{
     img{
         user-select: none;
     }
+    /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #a6a6a6 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 9px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #a6a6a6;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }

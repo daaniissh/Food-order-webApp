@@ -37,11 +37,11 @@ function Home(props) {
     "y",
   ];
   const [srch, setsrch] = useState(options[2]);
-  // let LowerAlphabets = [];
-  // options.forEach((item) => {
-  //   let o = item.toUpperCase();
-  //   LowerAlphabets.push(o);
-  // });
+  let LowerAlphabets = [];
+  options.forEach((item) => {
+    let o = item.toUpperCase();
+    LowerAlphabets.push(o);
+  });
 
 
 
@@ -60,8 +60,8 @@ function Home(props) {
   };
   const API_URL = `https://www.themealdb.com/api/json/v1/1/search.php?f=${srch}`;
   const mealData = () => {
-    axios.get(API_URL).then((response) => {
-      setData(response.data.meals);
+    axios.get(API_URL).then((res) => {
+      setData(res.data.meals);
       setLoading(false);
     });
   };
@@ -69,8 +69,7 @@ function Home(props) {
     mealData();
     getAllCategorys();
     NamedCAtogoery();
-  }, [srch]);
-
+  },[srch]);
   // let menuItems = menu.map((item) => {
   //   return (
 
@@ -85,7 +84,7 @@ function Home(props) {
     <div className="">
       <Header
         srch={srch}
-        options={options}
+        options={LowerAlphabets}
         setsrch={setsrch}
         lightmode={props.lightmode}
         darkmode={props.darkmode}
@@ -96,7 +95,7 @@ function Home(props) {
       {!loading ? (
         <Specila img={menu} />
       ) : (
-        <div className=" w-full h-screen absolute flex justify-center items-center loading top-0 text-4xl font-bold text-center  text-gray-800 ">
+        <div className=" w-full h-screen absolute flex justify-center items-center  top-0 text-4xl font-bold text-center  text-gray-800 ">
           <img
             className="w-16 h-16"
             src="https://samherbert.net/svg-loaders/svg-loaders/oval.svg"
