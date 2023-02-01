@@ -81,7 +81,7 @@ var filterdMenu2 = Allmenu.filter((dis) => {
       </li>
     );
   });
-
+  
   return (
     <>
     {showPopup === (

@@ -1,8 +1,6 @@
 {
   "name": "web-dairy-react-in-tailwind-css",
-  "homepage": "http://muhammeddanishpk.github.io/Food-order-webApp",
-  "version": "0.1.0",
-  "private": true,
+ 
   
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
